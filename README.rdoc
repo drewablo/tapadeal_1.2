@@ -1,0 +1,1 @@
+This is going to be a sparce readme, but essentially this is a webapp to let people see the best drink deals in their area. 

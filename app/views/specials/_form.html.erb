@@ -1,0 +1,30 @@
+<%= form_for(@special) do |f| %>
+  <% if @special.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@special.errors.count, "error") %> prohibited this special from being saved:</h2>
+
+      <ul>
+      <% @special.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :drink %><br />
+    <%= f.text_field :drink %>
+  </div>
+  
+ <div class="field">
+	<%= f.select :day, Date::DAYNAMES.zip((0..6).to_a), :prompt => 'Select Day' %>
+  </div>
+  
+  <div class="field">
+    <%= collection_select(:special, :bar_id, Bar.all, :id, :name, :prompt => 'Select Bar' ) %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
