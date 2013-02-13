@@ -16,10 +16,18 @@
   <body>
     
   	<div class="container">
-      <div class="span7 img-rounded well well-large">
-        <%= yield %> 
-      </div>         
+	  <div class="row">
+	     <div class="span7 img-rounded well well-large">
+           <%= yield %> 
+         </div>
+         <div class="span3 img-rounded well well-large">
+		 <h4><%= link_to "Tap A Deal", deals_path %></h4>
+		 <br>
+		 </br>
+		 <%= link_to "Upcoming Specials" %>
+		 </div>
+	  </div> 
     </div>
-  </div>
+
   </body>
 </html>

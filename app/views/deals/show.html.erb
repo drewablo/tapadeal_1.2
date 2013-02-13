@@ -1,0 +1,11 @@
+<h1>What's Coming Up</h1>
+<br>
+</br>
+<h4>Sort by <%= sortable "bar_id" %> or <%= sortable "day" %>
+</h4>
+<% for s in @upcoming %>
+<p>
+<%= s.drink %> at <%= link_to s.bar.name %> on <%= Date::DAYNAMES[s.day.to_i] %>
+</p>
+
+<% end %>
