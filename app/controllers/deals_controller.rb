@@ -3,7 +3,7 @@ class DealsController < ApplicationController
   # GET /specials.json
   helper_method :sort_column, :sort_direction
   def index
-    @specials = Special.order(sort_column + ' ' + sort_direction)
+     @specials = Special.order(sort_column + ' ' + sort_direction).where("day = ?", Time.now.wday)
 
     respond_to do |format|
       format.html # index.html.erb

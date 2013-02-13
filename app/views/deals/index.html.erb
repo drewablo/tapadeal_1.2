@@ -1,10 +1,11 @@
-<h1>Drink Up!</h1>
-<h4>Sort by <%= sortable "bar_id" %> or <%= sortable "day" %> 
-</h4>
+<h1>What's on Tap Today</h1>
+<br>
+</br>
 
 <% for s in @specials %>
 <p>
-<%= s.drink %> at <%= link_to s.bar.name %> on <%= Date::DAYNAMES[s.day.to_i] %>
+<%= s.drink %> at <%= link_to s.bar.name %>
 </p>
-
+<h4>Sort by <%= sortable "bar_id" %>
+</h4>
 <% end %>
