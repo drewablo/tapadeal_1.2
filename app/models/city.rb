@@ -3,4 +3,6 @@ class City < ActiveRecord::Base
  
   has_many :bars
   has_many :specials
+  
+  accepts_nested_attributes_for :bars, :specials
 end

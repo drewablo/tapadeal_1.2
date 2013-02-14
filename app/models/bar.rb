@@ -4,4 +4,6 @@ class Bar < ActiveRecord::Base
   belongs_to :city
   has_many :specials
   
+  validates_presence_of :city_id	
+  
 end

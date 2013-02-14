@@ -5,7 +5,7 @@ class DealsController < ApplicationController
   
   
   def index
-     @specials = Special.order.where("day = ?", Time.now.wday)
+     @specials = Special.order(sort_column + ' ' + sort_direction).where("day = ?", Time.now.wday)
 
     respond_to do |format|
       format.html # index.html.erb

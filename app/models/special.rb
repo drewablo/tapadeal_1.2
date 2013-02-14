@@ -3,4 +3,6 @@ class Special < ActiveRecord::Base
   
   belongs_to :bar
   belongs_to :city
+  
+  validates_presence_of :bar_id, :day
 end
