@@ -10,19 +10,18 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 	<style>
-	  .span7 { background: #a5cbe2 }
-	  body { color: #274257 }
-	  .span3 { background: #e4cb98 }
+	  .span5 { background:}
+	  
 	</style>
   </head>
   <body>
     
-  	<div class="container">
-	  <div class="row">
-	     <div class="span7 img-rounded well well-large">
-           <%= yield %> 
+  	<div class="container-fluid">
+	   <div class="row-fluid">
+	     <div class="span5 offset2 img-rounded well well-large">
+          <p><%= yield %></p>
          </div>
-         <div class="span3 img-rounded well well-large">
+         <div class="span3 center img-rounded well well-large">
 		 <h4><%= link_to 'Tap A Deal', deals_path %></h4>
 		 <br>
 		 </br>

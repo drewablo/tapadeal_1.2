@@ -14,7 +14,7 @@ class DealsController < ApplicationController
   end
   
   def show
-    @upcoming = Special.order(sort_column + ' ' + sort_direction).where("day >= ?", Time.now.wday)
+    @upcoming = Special.order(sort_column + ' ' + sort_direction).where("day > ?", Time.now.wday)
 	 
 	respond_to do |format|
       format.html # index.html.erb
