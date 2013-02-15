@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+	<%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<style>
+	  .span7 { background: #a5cbe2 }
+	  body { color: #274257 }
+	  .span3 { background: #e4cb98 }
+	</style>
+  </head>
+  <body>
+    
+  	<div class="container">
+	  <div class="row">
+	     <div class="span7 img-rounded well well-large">
+           <%= yield %> 
+         </div>
+         <div class="span3 img-rounded well well-large">
+		 <h4><%= link_to 'Tap A Deal', deals_path %></h4>
+		 <br>
+		 </br>
+		 <%= link_to 'Upcoming Specials' %>
+		 </div>
+	  </div> 
+      <div class="span12">
+	    <div id="admin_nav">
+         <% if admin_signed_in? %>
+		 <%= link_to 'Sign out', destroy_admin_session_path, :method => :delete %>
+		 <% end %>
+		 
+		</div>
+	  </div>
+	</div>  
+  </body>
+</html>

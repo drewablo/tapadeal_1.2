@@ -1,0 +1,10 @@
+<h1>What's Coming Up</h1>
+<br>
+</br>
+<% for s in @specials %>
+<p>
+<%= s.drink %> at <%= link_to s.bar.name %>
+</p>
+<h4>Sort by <%= sortable "bar_id" %>
+</h4>
+<% end %>
